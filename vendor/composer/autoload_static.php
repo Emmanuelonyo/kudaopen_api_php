@@ -27,10 +27,6 @@ class ComposerStaticInit008a4c636e2049f646778f73229868c9
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
         ),
-        'H' => 
-        array (
-            'Helper\\' => 7,
-        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -56,10 +52,6 @@ class ComposerStaticInit008a4c636e2049f646778f73229868c9
         'Psr\\Http\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-client/src',
-        ),
-        'Helper\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/Helpers',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

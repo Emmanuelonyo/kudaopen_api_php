@@ -2,6 +2,7 @@
     "name": "technolix/kudaopen_api_php",
     "description": "This is a Library for Kudabank Open api php feal free to contrbute",
     "type": "library",
+    "minimum-stability": "stable",
     "require": {
         "guzzle/guzzle": "^3.9",
         "guzzlehttp/guzzle": "^7.5"
@@ -19,4 +20,5 @@
             "email": "emmanuelonyo34@gmail.com"
         }
     ]
+    
 }
