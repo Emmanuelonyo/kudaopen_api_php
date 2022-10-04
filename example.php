@@ -4,8 +4,12 @@ require "vendor/autoload.php";
 
 use Technolix\KudaopenApiPhp\KudabankController;
 
+//ENVIRONMENT: @String "PRODUCTION" or "DEVELOPMENT"
+
+$environment = "DEVELOPMENT";
+
 $Kudabank = (new KudabankController)
-        ->Initialize("emmanuelonyo34@gmail.com", "6PZFIceatyxJAq9T4pd2");
+        ->Initialize("emmanuelonyo34@gmail.com", "6PZFIceatyxJAq9T4pd2", $environment);
 
 
         
