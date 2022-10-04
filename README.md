@@ -17,9 +17,12 @@ Initialize the Project With Composer
 ```php
 require "vendor/autoload";
 
+// $environment = "DEVELOPMENT" || "PRODUCTION";
 
+$environment = "DEVELOPMENT";
 $Kudabank = (new KudabankController)
-        ->Initialize("emmanuelonyo34@gmail.com", "6PZFIceatyxJAq9T4pd2");
+        ->Initialize("emmanuelonyo34@gmail.com", "6PZFIceatyxJAq9T4pd2", $environment);
+
 
 ```
 
