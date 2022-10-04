@@ -7,81 +7,55 @@ This is a simple php library for kuda open Api
 Initialize the Project With Composer 
 
 ```bash
-  composer require emmanuelonyo/basqet-php
+  composer require technolix/kudaopen_api_php
 ```
 
 ## Usage/Examples
 
-#### Instantiate class
+#### Initialize 
 
 ```php
-use Basqet\Basqet;
-$Basqet = new Basqet($_ENV['BASQET_SECRET_KEY'],$_ENV['BASQET_PUBLIC_KEY']);
+require "vendor/autoload";
+
+
+$Kudabank = (new KudabankController)
+        ->Initialize("emmanuelonyo34@gmail.com", "6PZFIceatyxJAq9T4pd2");
 
 ```
 
-#### Fetch Available currency
+#### Fetch Available Banks
 
 ```php
 
-// Fetch all fiat currency
-$currencies = $basqet::fetchAllCurrency("FIAT")
-
-```
-
-
-#### Initialize transaction
-
-
-```php
-
-$paymentData = [
-     "customer": [
-          "name"=> "tunde",
-          "email"=> "customer@example.com"
-     ],
-     "amount"=> "1000",
-     "currency"=> "NGN",
-     "meta"=> [
-          "reference": "bghggbbvv"
-     ]
-];
-
-$transactionObj = $Basqet::initializeTransaction(paymentData);
+// Fetch all Nigerian Banks
+$Kudabank->bank_list()
 
 ```
 
 
-#### Initiate transaction
+#### Generate Virtual Account
+
 
 ```php
 
-$transactionObj = $Basqet::initiateTransaction(<transactionId>, ['currency_id'=> <currency_id>])
+$data =  [
+            "email"=> 'emmanuelonyo34@gmail.com', 
+            "phoneNumber"=>"08074224016",
+            "lastName"=>"Onyo", 
+            "firstName"=>"Emmanuel", 
+            "trackingReference"=> "12456522155421"
+        ];
+
+$Kudabank->create_virtual_account($data);
 
 ```
 
+## PLEASE CCHECK THE EXAMPLE FILES FOR MOR INFO 
 
-#### Verify transaction
-
-```php
-
-
-$transactionObj = $Basqet::verifyTransaction(<transactionId>)
-
-```
-
-#### Mock webhook events
-
-```php
-
-
-$transactionObj = $Basqet.triggerWebhook(<transactionId>, [ status=> 'SUCCESSFUL' ])
-
-```
 
 ## Documentation/API reference
 
-[Documentation](https://docs.basqet.com/docs)
+[Documentation](https://kudabank.gitbook.io/kudabank/)
 
 
 ## Buy me a coffee 
